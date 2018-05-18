@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.subspec 'Framework' do |framework|
     framework.vendored_frameworks = "Carthage/build/iOS/#{@frameworkName}.framework"
   end
-  s.dependency = "Masonry"
+  s.dependency "Masonry"
   s.prepare_command =  <<-CMD
   touch Cartfile
   echo 'git "git@#{@baseURL}:#{@basePath}.git" == #{@version}' > Cartfile
